@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- IMFORMATION -->
+        <title>Mon premier site</title>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    
+    <body>
+        <!--CONTENER-->
+        <section id="bienvenue">
+
+            <!--EN-TETE-->
+
+            <div class="conteneur">
+                <header-a>
+                    Le kenya
+                    <span id="slogan">Voyagez dans un safari fort en emotions</span>
+                </header-a>
+            </div>
+        </section>
+
+        
+        <!--CONTENU-->
+        <section class="conteneur">
+            <!--TOP-->
+            <section>
+                <h1>Nos meilleurs destinations
+                </h1>
+                <p id="top">
+                    Sélectionnez votre prochaine destination de rêve parmi les séjours les plus appréciés par nos clients.
+                </p>
+                    <section id="flexbox-ville">
+                        <div class="diaporama-ville">
+                            <!-- Image 1 (visible au départ) -->
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMzDVIlgZ2qN9h5UthW4_8aNklFZokBKXCNYmV92fyLw&s=10" class="photo-diapo visible" alt="Kenya 1">
+                            <!-- Image 2 (cachée au départ) -->
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_6D-PDT41Fv5hlcwPC-NCLcV5bC49e2wT-OQajoiLfw&s=10" class="photo-diapo" alt="Kenya 2">
+                            <!-- Image 3 (cachée au départ) -->
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZg_dwgrgDXTrM0-pTCXYoEgcTfbftk6XKowcoBmBpOQ&s=10" class="photo-diapo" alt="Kenya 3">
+                        </div>
+                        <div class="diaporama-ville">
+                            <!-- Image 1 (visible au départ) -->
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMzDVIlgZ2qN9h5UthW4_8aNklFZokBKXCNYmV92fyLw&s=10" class="photo-diapo visible" alt="Kenya 1">
+                            <!-- Image 2 (cachée au départ) -->
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_6D-PDT41Fv5hlcwPC-NCLcV5bC49e2wT-OQajoiLfw&s=10" class="photo-diapo" alt="Kenya 2">
+                            <!-- Image 3 (cachée au départ) -->
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZg_dwgrgDXTrM0-pTCXYoEgcTfbftk6XKowcoBmBpOQ&s=10" class="photo-diapo" alt="Kenya 3">
+                        </div>
+                        <div class="diaporama-ville">
+                            <!-- Image 1 (visible au départ) -->
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMzDVIlgZ2qN9h5UthW4_8aNklFZokBKXCNYmV92fyLw&s=10" class="photo-diapo visible" alt="Kenya 1">
+                            <!-- Image 2 (cachée au départ) -->
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_6D-PDT41Fv5hlcwPC-NCLcV5bC49e2wT-OQajoiLfw&s=10" class="photo-diapo" alt="Kenya 2">
+                            <!-- Image 3 (cachée au départ) -->
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZg_dwgrgDXTrM0-pTCXYoEgcTfbftk6XKowcoBmBpOQ&s=10" class="photo-diapo" alt="Kenya 3">
+                        </div>
+                        <div class="diaporama-ville">
+                            <!-- Image 1 (visible au départ) -->
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMzDVIlgZ2qN9h5UthW4_8aNklFZokBKXCNYmV92fyLw&s=10" class="photo-diapo visible" alt="Kenya 1">
+                            <!-- Image 2 (cachée au départ) -->
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_6D-PDT41Fv5hlcwPC-NCLcV5bC49e2wT-OQajoiLfw&s=10" class="photo-diapo" alt="Kenya 2">
+                            <!-- Image 3 (cachée au départ) -->
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZg_dwgrgDXTrM0-pTCXYoEgcTfbftk6XKowcoBmBpOQ&s=10" class="photo-diapo" alt="Kenya 3">
+                        </div>
+                    </section>
+
+                    <!--EN VOIR PLUS-->
+
+                    <div style="text-align: right; margin-top: 15px;">
+                        <a href="" id= "voir">En voir plus<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Tabler Icons by Paweł Kuna - https://github.com/tabler/tabler-icons/blob/master/LICENSE --><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-4 4l4-4m-4-4l4 4"/></svg></a>
+                    </div>
+                    
+            </section>
+
+        </section> 
+        <script>
+            // 1. On récupère TOUTES les photos du diaporama dans un tableau
+            const photos = document.querySelectorAll('.photo-diapo');
+            let indexActuel = 0;
+
+            // 2. On lance le minuteur (3000 ms = 3 secondes)
+            setInterval(() => {
+                // Enlever la classe visible de la photo actuelle
+                photos[indexActuel].classList.remove('visible');
+
+                // Calculer le numéro de la photo suivante (et revenir à 0 si on arrive à la fin)
+                indexActuel = (indexActuel + 1) % photos.length;
+
+                // Ajouter la classe visible sur la nouvelle photo
+                photos[indexActuel].classList.add('visible');
+            }, 3000);
+        </script>
+
+        <!--pied-de-page-->
+        <footer>
+             <div class="conteneur" id="flexbox-foot">
+                <div id="logo-foot">
+                    <img src="https://e7.pngegg.com/pngimages/403/492/png-clipart-africa-graphics-graphy-map-africa-world-map.png" alt="afrique" style="width: 70px ; display: block;" />
+                    2026 © cap afrique
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="apropos.html">À propos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+        
+    </body>
+</html>
